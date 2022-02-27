@@ -1,0 +1,23 @@
+
+<html>
+  <head>
+    <title>PyBotSimulation</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <base href="https://pybotsimulation.github.io/"/>
+  </head>
+  <body>
+    <p>Redirection : https://pybotsimulation.github.io/<span id="lang"></span></p>
+    <script>
+      function fonctionAExecuter(){
+        open(redirecturl);
+        close();
+      }
+      var lang = navigator.language.substr(0,2).toLowerCase();
+      var redirecturl = 'https://pybotsimulation.github.io/' + lang
+      document.getElementById("lang").innerHTML=lang;
+      setTimeout(fonctionAExecuter, 5000);
+    </script>
+  </body>
+</html>
