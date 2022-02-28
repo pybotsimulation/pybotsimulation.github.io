@@ -26,20 +26,16 @@
         right: -20px;
         transition: 0.5s;
       }
-      button:hover {
+      .yellow:hover {
         background-color: #FFB600;
       }
-      button:hover span {
+      .yellow:hover span {
         padding-right: 25px;
       }
-      button:hover span:after {
+      .yellow:hover span:after {
         opacity: 1;
         right: 0;
       }
-      .bigger{
-        font-size: 6em;
-      }
-
 
       button {
         display: inline-block;
