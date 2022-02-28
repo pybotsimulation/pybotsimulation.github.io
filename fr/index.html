@@ -1,191 +1,19 @@
 
 <!DOCTYPE html >
-<html lang="en">
+<html lang="fr">
 	<head>
 		<meta charset="utf-8">
 		<title>Sticky Menu Tutorial</title>
-
 		<meta name="viewport" content="initial-scale=1.0">
-
-
-		<style type="text/css">
-/* micro reset */
-* {
-	box-sizing: border-box;
-}
-html, body, ul {
-	padding: 0; margin: 0;
-}
-
-body {
-	line-height: 1.75;
-	background: #B13C2E;
-	color: #F1EEDD;
-	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-}
-.main-header {
-	background: #FFF;
-	color: #B13C2E;
-}
-.header-inner {
-	display: table;
-	width: 100%;
-	max-width: 1100px;
-	margin: 0 auto;
-	padding: 20px 25px;
-}
-.header-inner > * {
-	display: table-cell;
-	vertical-align: middle;
-}
-
-.header-nav {
-	text-align: right;
-}
-.header-nav ul,
-.header-nav li {
-	display: inline;
-	list-style: none;
-}
-.header-nav a {
-	position: relative;
-	display: inline-block;
-	padding: 8px 20px;
-	vertical-align: middle;
-	font-weight: 300; /* between regular and light */
-	letter-spacing: 0.025em;
-	color: inherit;
-	text-decoration: none;
-}
-.header-nav a:after {
-	content: "";
-	position: absolute;
-	bottom: 0; right: 20px; left: 20px;
-	height: 2px;
-	background-color: #B13C2E;
-
-	/* for animation */
-	opacity: 0;
-	transform: translateY(5px);
-	transition: all .4s;
-}
-.header-nav a:hover:after,
-.header-nav a:focus:after {
-	opacity: .6;
-	bottom: 0;
-	transform: translateY(0);
-}
-.header-nav a:focus {
-	outline: none; /* I can do it because I already have a style for that */
-}
-
-/* When navbar is stuck */
-.nav-is-stuck .main-header {
-	/* http://caniuse.com/#feat=css-sticky */
-	/* not good support at this time (nov 2015) */
-	/* so use fixed if JS activated */
-	position: sticky; 
-}
-.nav-is-stuck .main-header {
-	position: fixed;
-	top: 0; left: 0; right: 0;
-	box-shadow: 0 1px 4px rgba(0,0,0,.15);
-	animation: stickAnim .3s;
-}
-
-@keyframes stickAnim {
-	0% {
-		transform: translateY(-86px);
-	}
-	100% {
-		transform: translateY(0);
-	}
-}
-
-
-
-
-/* 
-	Other styles for demo
- */
-.container {
-	max-width: 1100px;
-	margin: 0 auto;
-	padding: 20px 25px;
-	color: #364452;
-}
-.cleanbg {
-	padding-bottom: 50px;
-	background: #FFF;
-}
-.bigtxt {
-	margin: 4em 0;
-	color: #fff;
-	font-size: 1.75vw;
-	letter-spacing: 0.125em;
-	word-spacing: 0.125em;
-	text-transform: uppercase;
-}
-.txtcenter {
-	text-align: center;
-}
-
-h1, h2 {
-	margin: 2.5em 0 1.5em;
-	letter-spacing: 0.125em;
-	word-spacing: 0.125em;
-	text-transform: uppercase;
-	text-align: center;
-}
-
-h1 {
-	font-size: 2em;
-	font-weight: lighter;
-}
-
-h2 {
-	font-weight: normal;
-}
-
-p {
-	margin: 1.75em 0;
-	font-weight: 300;
-	letter-spacing: 0.025em;
-	word-spacing: 0.025em;
-}
-
-.main-footer {
-	background: #364452;
-}
-.main-footer .container {
-	padding: 50px 25px;
-	color: #FFF;
-	color: rgba(255,255,255,.6);
-}
-.main-footer a {
-	color: inherit;
-	letter-spacing: 0.125em;
-	word-spacing: 0.125em;
-	text-transform: uppercase;
-	font-size: .8em;
-}
-.main-footer span {
-	display: inline-block;
-	margin: 0 15px;
-	color: rgba(255,255,255,.2);
-}
-		</style>
 	</head>
-	
 	<body>
 		<header id="header" role="banner" class="main-header">
 			<div class="header-inner">
 				<div class="header-logo">
-					
 				</div>
 				<nav class="header-nav">
 					<ul>
-						<li><a href="#">Home</a></li>
+						<li><a href="https://pybotsimulation.github.io/">Home</a></li>
 						<li><a href="#">Our projects</a></li>
 						<li><a href="#">About us</a></li>
 						<li><a href="#">Contact</a></li>
@@ -193,17 +21,12 @@ p {
 				</nav>
 			</div>
 		</header>
-
 		<section id="section" class="main-section first-section">
 			<div class="container">
 				<p class="bigtxt txtcenter">Some awesome calls to action</p>
 			</div>
 		</section>
-
-
 		<section id="main" class="main-section cleanbg">
-			
-
 		<footer class="main-footer">
 			<div class="container">
 				<p class="txtcenter">
@@ -212,19 +35,7 @@ p {
 				</p>
 			</div>
 		</footer>
-
 		<script>
-
-/*
-	RequestAnimationFrame Polyfill
-
-	http://paulirish.com/2011/requestanimationframe-for-smart-animating/
-	http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
-	by Erik Möller, fixes from Paul Irish and Tino Zijdel
-
-	MIT license
- */ 
-
 (function() {
 	var lastTime = 0;
 	var vendors = ['ms', 'moz', 'webkit', 'o'];
